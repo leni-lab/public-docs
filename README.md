@@ -9,9 +9,7 @@ application source repositories.
 
 ## Applications
 
-- sftpbeam
-  - latest: `apps/sftpbeam/latest/`
-  - versions: `apps/sftpbeam/`
+- [sftpbeam](apps/sftpbeam)
 
 ## Versioning
 

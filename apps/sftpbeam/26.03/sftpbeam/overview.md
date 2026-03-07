@@ -46,7 +46,7 @@ short product overview for sftpbeam users.
 - `SPDX-License-Identifier: Proprietary`
 - `Copyright (c) 2026 tius`
 - `All rights reserved`
-- see repository license file `LICENSE`
+- see repository license file [LICENSE](LICENSE)
 
 ## next steps
 

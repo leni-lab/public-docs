@@ -1,11 +1,8 @@
 # sftpbeam docs
 
-- latest docs: [latest/overview.md](./latest/overview.md)
-- license: [latest/LICENSE](./latest/LICENSE)
-
 ## versions
 
-- no versions published yet
+- [26.03 (latest)](./26.03/sftpbeam/overview.md)
 
 ## notes
 

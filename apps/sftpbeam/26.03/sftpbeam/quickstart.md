@@ -32,16 +32,20 @@ see [settings.md](settings.md) for all keys and defaults.
 
 ## verify host key
 
-- run host key check before first upload:
-
-```bash
-sftpbeam --check
-```
-
-- to check one specific sftp entry and accept a new key:
+before the first upload, register the server's host key:
 
 ```bash
 sftpbeam --check <name> --accept-new-key
+```
+
+- this connects to the server, shows the fingerprint, and adds it to `known_hosts`
+- the `known_hosts` file is created automatically if it does not exist yet
+- without this step, uploads will fail with a "known_hosts file not found" error
+
+to check all configured sftp entries interactively (with confirmation prompt):
+
+```bash
+sftpbeam --check
 ```
 
 ## run one pipeline

@@ -48,6 +48,10 @@ per-logger level overrides.
   - `filemill.mill = debug`
   - `/asyncssh = warning`
 
+note on asyncssh log levels: asyncssh logs very little at `info` and very
+verbosely at `debug` (ssh handshake, packet details, crypto). there is no
+useful middle ground — `info` is the recommended level for normal operation.
+
 see also: [logs/settings.md](logs/settings.md)
 
 ## [logging console]
@@ -72,6 +76,18 @@ file handler defaults.
 | `format` | long formatter | file log format string |
 | `date_format` | `%Y-%m-%d %H:%M:%S` | timestamp format |
 | `encoding` | `utf-8` | file encoding |
+
+## [logging pipe]
+
+pipe handler defaults; replaces the console handler when stdout is not a TTY.
+activates automatically — no explicit config required.
+
+output format is fixed: `[{n}] {message}` where `n` is a numeric level
+(0=TRACE, 1=DEBUG, 2=INFO, 3=WARNING, 4=ERROR, 5=CRITICAL).
+
+| key | default | notes |
+| --- | --- | --- |
+| `log_level` | `TRACE` | minimum level for pipe output |
 
 ## [input]
 
@@ -163,6 +179,7 @@ sftp server connection settings.
 | `known_hosts` | `~/.ssh/known_hosts` | empty disables host verification |
 | `connect_timeout` | `30s` | max time to establish connection |
 | `keep_alive` | `30s` | ssh keepalive interval, empty disables |
+| `overwrite` | `true` | overwrite existing files on remote; uses posix-rename for atomic replace |
 
 see also: [sftp/settings.md](sftp/settings.md), [troubleshooting.md](troubleshooting.md)
 

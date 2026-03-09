@@ -29,6 +29,29 @@ controls the log file handler.
 | `date_format` | `%Y-%m-%d %H:%M:%S` | `strftime` format |
 | `encoding` | `utf-8` | any encoding accepted by `open()` |
 
+## `[logging pipe]`
+
+controls the stdout handler when the process is not connected to a TTY
+(i.e. stdout is piped). the console handler is skipped in this case.
+
+output format is fixed: `[{n}] {message}` where `n` is a numeric level:
+
+| n | level |
+| --- | --- |
+| `0` | `TRACE` |
+| `1` | `DEBUG` |
+| `2` | `INFO` |
+| `3` | `WARNING` |
+| `4` | `ERROR` |
+| `5` | `CRITICAL` |
+
+| key | default | values |
+| --- | --- | --- |
+| `log_level` | `TRACE` | `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`, `SILENT` |
+
+this section is optional — zero-config. `[logging pipe]` activates
+automatically when stdout is not a TTY; no explicit configuration needed.
+
 ## `[logging]`
 
 per-logger level overrides. value is a level name (case-insensitive).

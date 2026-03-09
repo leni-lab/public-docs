@@ -3,14 +3,7 @@
 
 # app settings
 
-runtime keys used by `toolkit.app.run_with_timeout()`.
+no runtime keys in `toolkit-app`.
 
-## `[app]`
-
-| key | default | values | notes |
-| --- | --- | --- | --- |
-| `max_runtime` | *(none)* | duration, e.g. `8h`, `30min` | optional global runtime limit for app shutdown |
-
-`--max-runtime` overrides the config value.
-
-for duration syntax see [../fields/syntax.md](../fields/syntax.md).
+runtime settings (`max_runtime`) are documented in
+[../runtime/settings.md](../runtime/settings.md).

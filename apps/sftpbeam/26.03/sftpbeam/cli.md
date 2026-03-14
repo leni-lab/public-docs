@@ -19,12 +19,11 @@ sftpbeam [options] <name>
 | option | value | purpose |
 | --- | --- | --- |
 | `-c`, `--config` | `TEXT` | config filename, default `sftpbeam.ini` |
-| `-l`, `--log` | `TEXT` | log filename, default `sftpbeam.log` |
 | `-v`, `--verbose` | none | increase verbosity (`-v` debug, `-vv` trace) |
 | `-q`, `--quiet` | none | decrease verbosity (`-q` warning to `-qqqq` silent) |
 | `-s`, `--set` | `SECTION:KEY=VALUE` | override config value, may be repeated |
 | `--max-runtime` | `DURATION` | stop after duration, overrides config |
-| `--check` | optional with `<name>` | verify sftp host key and exit |
+| `--check` | `[NAME]` | verify sftp host key and exit |
 | `--accept-new-key` | none | add unknown host key, requires `--check <name>` |
 | `--remove-key` | none | remove stored host key, requires `--check <name>` |
 | `-h`, `--help` | none | show help and exit |

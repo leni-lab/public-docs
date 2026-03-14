@@ -5,10 +5,6 @@
 
 first working setup path for sftpbeam operators.
 
-## audience
-
-- end users and operators
-
 ## prerequisites
 
 - deployed `sftpbeam` executable

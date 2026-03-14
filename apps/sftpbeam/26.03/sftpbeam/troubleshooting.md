@@ -36,6 +36,22 @@ sftpbeam --check <name> --accept-new-key
 sftpbeam --check <name> --remove-key
 ```
 
+## known_hosts file not found
+
+symptom:
+
+- `known_hosts file not found`
+
+cause:
+
+- `known_hosts` points to a file that does not exist
+- default path `~/.ssh/known_hosts` is used but has not been created yet
+
+fix:
+
+- populate via `--check <name> --accept-new-key` (creates the file automatically)
+- or set `known_hosts` to empty in `[sftp]` to disable host verification
+
 ## host key mismatch
 
 symptom:

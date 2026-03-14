@@ -38,7 +38,7 @@ before claim.
 | `backoff` | `1s` | min `1s` | initial retry delay; doubles on each attempt |
 | `backoff_max` | `15s` | min `1s` | upper bound for exponential backoff |
 | `work_timeout` | `60min` | min `1s` | max time a processor may run before the file is retried |
-| `clean_up` | `0` | min `0s` | age threshold for deleting files from `done/`; `0` disables cleanup |
+| `done_max_age` | `0` | min `0s` | max age of files in `done/` before deletion; `0` disables |
 | `pre_claim_lock` | `true` | bool | pre-check lock state before claim and skip locked files |
 | `pre_claim_stable` | `2s` | min `0s` | require mtime stability before claim; `0s` disables |
 | `pre_claim_timeout` | `1min` | min `0s` | warn if pre-claim blocking persists; `0s` disables warnings |
@@ -61,6 +61,6 @@ processing behavior summary:
 - routing targets are `done/`, `fail/`, `retry/`, and `review/`
 - leftover `work/` files are moved back to `retry/` at startup (crash recovery)
 - processor timeout `work_timeout` cancels hung processors and schedules retry
-- when `clean_up > 0`, files in `done/` older than `clean_up` are deleted at startup and every minute
+- when `done_max_age > 0`, files in `done/` older than `done_max_age` are deleted at startup and every minute
 
 for matcher and duration syntax see [syntax.md](../fields/syntax.md).

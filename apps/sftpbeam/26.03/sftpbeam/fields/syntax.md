@@ -34,3 +34,4 @@ Reference for accepted values per field type.
 - choice values are case-insensitive by default
 - duration values must be a positive integer followed directly by a unit
 - path values are not validated unless a field spec is configured to do so
+- any field value can be set to `<default>` to explicitly request the field's default value; raises an error if the field has no default

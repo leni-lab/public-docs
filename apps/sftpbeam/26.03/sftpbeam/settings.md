@@ -5,8 +5,6 @@
 
 canonical configuration reference for sftpbeam.
 
-audience: end users and operators.
-
 ## files
 
 - use `sftpbeam.ini` in the working directory for local runs
@@ -42,15 +40,15 @@ see also: [cli.md](cli.md)
 per-logger level overrides.
 
 - key format: `<logger_name> = <level>`
-- relative names are prefixed with app name: `filemill.mill` → `sftpbeam.filemill.mill`
-- leading `/` = absolute name (for third-party loggers): `/asyncssh` → `asyncssh`
+- relative names are prefixed with app name: `filemill.mill` -> `sftpbeam.filemill.mill`
+- leading `/` = absolute name (for third-party loggers): `/asyncssh` -> `asyncssh`
 - examples:
   - `filemill.mill = debug`
   - `/asyncssh = warning`
 
 note on asyncssh log levels: asyncssh logs very little at `info` and very
 verbosely at `debug` (ssh handshake, packet details, crypto). there is no
-useful middle ground — `info` is the recommended level for normal operation.
+useful middle ground - `info` is the recommended level for normal operation.
 
 see also: [logs/settings.md](logs/settings.md)
 
@@ -61,7 +59,7 @@ console handler defaults.
 | key | sample | notes |
 | --- | --- | --- |
 | `log_level` | `TRACE` | minimum level for console output |
-| `use_color` | `true` | colored console output |
+| `color_mode` | `auto` | `auto`, `always`, `never`; `auto` respects `NO_COLOR` |
 | `format` | `%(message)s` | console log format |
 
 ## [logging file]
@@ -70,9 +68,8 @@ file handler defaults.
 
 | key | sample | notes |
 | --- | --- | --- |
-| `enabled` | `true` | enable file logging |
+| `log_file` | `sftpbeam.log` | empty = no log file (default); relative paths resolved against app directory |
 | `log_level` | `DEBUG` | minimum level for file output |
-| `log_file` | `<default>` | uses computed default `<app_name>.log` |
 | `format` | long formatter | file log format string |
 | `date_format` | `%Y-%m-%d %H:%M:%S` | timestamp format |
 | `encoding` | `utf-8` | file encoding |
@@ -80,7 +77,7 @@ file handler defaults.
 ## [logging pipe]
 
 pipe handler defaults; replaces the console handler when stdout is not a TTY.
-activates automatically — no explicit config required.
+activates automatically - no explicit config required.
 
 output format is fixed: `[{n}] {message}` where `n` is a numeric level
 (0=TRACE, 1=DEBUG, 2=INFO, 3=WARNING, 4=ERROR, 5=CRITICAL).
@@ -119,7 +116,7 @@ see also: [filemill/settings.md](filemill/settings.md), [troubleshooting.md](tro
 
 | key | sample | notes |
 | --- | --- | --- |
-| `clean_up` | `60min` | cleanup cycle interval |
+| `done_max_age` | `60min` in sample | max age of files in `done/` before deletion; empty disables (default) |
 | `poll` | `1s` | inbox scan interval |
 | `work_timeout` | `60min` | max processor runtime before retry |
 | `pre_claim_stable` | `2s` | short mtime stability window before claim |

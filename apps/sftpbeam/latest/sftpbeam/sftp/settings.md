@@ -18,7 +18,7 @@ all keys belong to a single INI section passed to `SftpClient()`.
 | `connect_timeout` | `30s` | max time to establish the ssh connection |
 | `keep_alive` | `30s` | ssh keepalive interval; empty disables; see note below |
 
-`key_file` and `known_hosts` may be relative paths — they are resolved against
+`key_file` and `known_hosts` may be relative paths - they are resolved against
 `base_dir` if provided to `SftpClient()`.
 
 `known_hosts =` (empty) disables host key verification entirely. this is

@@ -13,8 +13,14 @@ controls the console (stdout) handler.
 | key | default | values |
 | --- | --- | --- |
 | `log_level` | `TRACE` | `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`, `SILENT` |
-| `use_color` | `true` | `true`, `false` |
+| `color_mode` | `auto` | `auto`, `always`, `never` |
 | `format` | `%(message)s` | python logging format string |
+
+`color_mode` behavior:
+
+- `auto`: use colors on tty output, respect `NO_COLOR`
+- `always`: force colors
+- `never`: disable colors
 
 ## `[logging file]`
 
@@ -22,8 +28,7 @@ controls the log file handler.
 
 | key | default | values |
 | --- | --- | --- |
-| `enabled` | `false` | `true`, `false` |
-| `log_file` | *(set by app)* | filename; resolved relative to app directory |
+| `log_file` | *(empty - no log file)* | filename; empty disables the handler; relative paths resolved against app directory |
 | `log_level` | `TRACE` | `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`, `SILENT` |
 | `format` | `[%(asctime)s] %(levelname)-7s - %(name)s - %(message)s` | python logging format string |
 | `date_format` | `%Y-%m-%d %H:%M:%S` | `strftime` format |
@@ -49,7 +54,7 @@ output format is fixed: `[{n}] {message}` where `n` is a numeric level:
 | --- | --- | --- |
 | `log_level` | `TRACE` | `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`, `SILENT` |
 
-this section is optional — zero-config. `[logging pipe]` activates
+this section is optional - zero-config. `[logging pipe]` activates
 automatically when stdout is not a TTY; no explicit configuration needed.
 
 ## `[logging]`

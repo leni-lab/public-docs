@@ -10,6 +10,7 @@ application source repositories.
 ## Applications
 
 - [sftpbeam](apps/sftpbeam)
+- [wikiread](apps/wikiread)
 
 ## Versioning
 

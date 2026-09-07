@@ -2,7 +2,8 @@
 
 ## versions
 
-- [26.03 (latest)](./26.03/sftpbeam/overview.md)
+- [26.07.11 (latest)](./26.07.11/sftpbeam/overview.md)
+- [26.03](./26.03/sftpbeam/overview.md)
 
 ## notes
 

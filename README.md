@@ -1,6 +1,6 @@
 # Public Docs
 
-Public user documentation for TIUS applications.
+Public user documentation for leni-lab applications.
 
 ## Purpose
 
@@ -11,6 +11,8 @@ application source repositories.
 
 - [sftpbeam](apps/sftpbeam)
 - [wikiread](apps/wikiread)
+- [wiki2user](apps/wiki2user)
+- [configview](apps/configview)
 
 ## Versioning
 

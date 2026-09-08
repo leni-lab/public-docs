@@ -1,6 +1,6 @@
-# Public Docs
+# User Docs
 
-Public user documentation for leni-lab applications.
+User documentation for leni-lab applications.
 
 ## Purpose
 

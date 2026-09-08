@@ -9,10 +9,11 @@ application source repositories.
 
 ## Applications
 
-- [sftpbeam](apps/sftpbeam)
-- [wikiread](apps/wikiread)
-- [wiki2user](apps/wiki2user)
 - [configview](apps/configview)
+- [sftpbeam](apps/sftpbeam)
+- [wiki2user](apps/wiki2user)
+- [wikipush](apps/wikipush)
+- [wikiread](apps/wikiread)
 
 ## Versioning
 

@@ -2,7 +2,8 @@
 
 ## versions
 
-- [26.09.3 (latest)](./26.09.3/wikipush/overview.md)
+- [26.09.4 (latest)](./26.09.4/wikipush/overview.md)
+- [26.09.3](./26.09.3/wikipush/overview.md)
 
 ## notes
 

@@ -10,10 +10,12 @@ application source repositories.
 ## Applications
 
 - [configview](apps/configview)
+- [configview-usermgr](apps/configview-usermgr)
 - [sftpbeam](apps/sftpbeam)
-- [wiki2user](apps/wiki2user)
 - [wikipush](apps/wikipush)
 - [wikiread](apps/wikiread)
+- [wiki2config](apps/wiki2config)
+- [wiki2config-usermgr](apps/wiki2config-usermgr)
 
 ## Versioning
 

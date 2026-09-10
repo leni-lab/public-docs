@@ -2,7 +2,8 @@
 
 ## versions
 
-- [26.09.6 (latest)](./26.09.6/wiki2config/overview.md)
+- [26.09.9 (latest)](./26.09.9/wiki2config/overview.md)
+- [26.09.6](./26.09.6/wiki2config/overview.md)
 
 ## notes
 

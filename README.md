@@ -9,6 +9,7 @@ application source repositories.
 
 ## Applications
 
+- [configtrack](apps/configtrack)
 - [configview](apps/configview)
 - [configview-usermgr](apps/configview-usermgr)
 - [sftpbeam](apps/sftpbeam)

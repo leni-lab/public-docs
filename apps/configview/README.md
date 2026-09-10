@@ -2,7 +2,8 @@
 
 ## versions
 
-- [26.09.26 (latest)](./26.09.26/configview/overview.md)
+- [26.09.42 (latest)](./26.09.42/configview/overview.md)
+- [26.09.26](./26.09.26/configview/overview.md)
 
 ## notes
 

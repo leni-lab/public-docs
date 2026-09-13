@@ -12,6 +12,7 @@ application source repositories.
 - [configtrack](apps/configtrack)
 - [configview](apps/configview)
 - [configview-usermgr](apps/configview-usermgr)
+- [leni2store](apps/leni2store)
 - [sftpbeam](apps/sftpbeam)
 - [wikipush](apps/wikipush)
 - [wikiread](apps/wikiread)

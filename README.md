@@ -9,16 +9,27 @@ application source repositories.
 
 ## Applications
 
+config management
+
 - [configtrack](apps/configtrack)
 - [configview](apps/configview)
 - [configview-usermgr](apps/configview-usermgr)
-- [leni2store](apps/leni2store)
-- [sftpbeam](apps/sftpbeam)
-- [storepack](apps/storepack)
 - [wikipush](apps/wikipush)
 - [wikiread](apps/wikiread)
 - [wiki2config](apps/wiki2config)
 - [wiki2config-usermgr](apps/wiki2config-usermgr)
+
+news item store
+  
+- [leni2store](apps/leni2store)
+- [leniextract](apps/leniextract)
+- [storeindex](apps/storepack)
+- [storepack](apps/storepack)
+
+general utilities
+
+- [sftpbeam](apps/sftpbeam)
+
 
 ## Versioning
 

@@ -28,8 +28,8 @@ news item store
 
 general utilities
 
+- [logarchive](apps/logarchive)
 - [sftpbeam](apps/sftpbeam)
-
 
 ## Versioning
 

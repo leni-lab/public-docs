@@ -1,0 +1,5 @@
+LICENSE
+logarchive.example.ini
+operation.md
+overview.md
+settings.md

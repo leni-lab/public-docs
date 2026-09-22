@@ -2,7 +2,8 @@
 
 ## versions
 
-- [26.09.14 (latest)](./26.09.14/leniextract/overview.md)
+- [26.09.24 (latest)](./26.09.24/leniextract/overview.md)
+- [26.09.14](./26.09.14/leniextract/overview.md)
 - [26.09.6](./26.09.6/leniextract/overview.md)
 - [26.09.5](./26.09.5/leniextract/overview.md)
 - [26.09.2](./26.09.2/leniextract/overview.md)

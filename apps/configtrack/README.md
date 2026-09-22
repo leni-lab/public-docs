@@ -2,7 +2,8 @@
 
 ## versions
 
-- [26.09.5 (latest)](./26.09.5/configtrack/overview.md)
+- [26.09.7 (latest)](./26.09.7/configtrack/overview.md)
+- [26.09.5](./26.09.5/configtrack/overview.md)
 - [26.09.3](./26.09.3/configtrack/overview.md)
 - [26.09.2](./26.09.2/configtrack/overview.md)
 

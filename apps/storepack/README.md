@@ -2,7 +2,8 @@
 
 ## versions
 
-- [26.09.7 (latest)](./26.09.7/storepack/overview.md)
+- [26.09.9 (latest)](./26.09.9/storepack/overview.md)
+- [26.09.7](./26.09.7/storepack/overview.md)
 - [26.09.6](./26.09.6/storepack/overview.md)
 - [26.09.5](./26.09.5/storepack/overview.md)
 - [26.09.4](./26.09.4/storepack/overview.md)

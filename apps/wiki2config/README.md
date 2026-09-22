@@ -2,7 +2,8 @@
 
 ## versions
 
-- [26.09.18 (latest)](./26.09.18/wiki2config/overview.md)
+- [26.09.22 (latest)](./26.09.22/wiki2config/overview.md)
+- [26.09.18](./26.09.18/wiki2config/overview.md)
 - [26.09.12](./26.09.12/wiki2config/overview.md)
 - [26.09.10](./26.09.10/wiki2config/overview.md)
 - [26.09.9](./26.09.9/wiki2config/overview.md)

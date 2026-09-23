@@ -1,0 +1,36 @@
+[back to overview](overview.md)
+---
+
+# Troubleshooting
+
+Start with the phase in the report and the console diagnostics. A failed report
+can describe output that is already active when only Git failed.
+
+| diagnostic or symptom             | action                                                                        |
+| --------------------------------- | ----------------------------------------------------------------------------- |
+| malformed or misplaced include    | use `* /include:` in the initial block, before comments, prose, or `__NOTOC__` |
+| invalid include target            | check namespace, lowercase filename mapping, and forbidden path characters    |
+| include cycle or missing page     | follow the reported source chain and correct the Wiki links or mirror         |
+| processor failure               | read the processor report and stderr, then correct input or processor setup   |
+| processor executable not found    | use the installed `wiki2config-usermgr.exe` for the usermgr processor          |
+| processor module not found        | use `wiki2config_usermgr` after `-m` for the usermgr processor                 |
+| processor timeout                 | check processor diagnostics and `[convert <name>] timeout`                    |
+| empty processor result            | select a processor that returns its complete INI file set            |
+| invalid Windows-1252 or CRLF      | fix processor serialization, including unrepresentable characters             |
+| processor metadata is not allowed | let wiki2config maintain structured comments                                  |
+| invalid JSON input                | check the shared envelope version, page source names, and text members       |
+| duplicate heading path            | use distinct sibling names; types and letter case do not distinguish paths |
+| missing use target                | check the path and include the target page                                   |
+| unexpected replaced value        | check instruction order; `/use:` replaces supplied fields, `/use +:` adds lists |
+| invalid additive list            | remove empty comma-separated elements; an entirely empty list is allowed   |
+| no source location                | correct the processor's page-local `source:<source>:<line>` reference         |
+| invalid existing metadata         | correct the active baseline, then restart or run another one-shot import      |
+| partial activation                | resolve the filesystem error, then complete a valid import                    |
+| Git dubious ownership             | set `[git] trust_directory = yes` for the dedicated archive                   |
+| report could not be written       | restore write access or free space, then run another attempt                  |
+| no debug output with `-v`         | lower the relevant logging handler's `log_level` to `DEBUG` or `TRACE`         |
+
+`trust_directory` only changes Git's ownership check. It does not grant write
+access. Git failure leaves successfully activated files in place. A clean
+restart regenerates from current input and does not restore an older Git
+version. See [recovery](operation.md#failure-and-restart).

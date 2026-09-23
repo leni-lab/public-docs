@@ -1,0 +1,12 @@
+LICENSE
+cli.md
+config/syntax.md
+fields/syntax.md
+filemill/settings.md
+leni2020.md
+leni2store.example.ini
+logs/settings.md
+overview.md
+quickstart.md
+settings.md
+troubleshooting.md

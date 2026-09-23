@@ -2,7 +2,8 @@
 
 ## versions
 
-- [26.09.43 (latest)](./26.09.43/storeindex/overview.md)
+- [26.09.45 (latest)](./26.09.45/storeindex/overview.md)
+- [26.09.43](./26.09.43/storeindex/overview.md)
 - [26.09.42](./26.09.42/storeindex/overview.md)
 - [26.09.41](./26.09.41/storeindex/overview.md)
 - [26.09.40](./26.09.40/storeindex/overview.md)

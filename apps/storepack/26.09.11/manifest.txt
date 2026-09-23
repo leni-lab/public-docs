@@ -1,0 +1,11 @@
+LICENSE
+cli.md
+config/syntax.md
+fields/syntax.md
+logs/settings.md
+overview.md
+quickstart.md
+restore.md
+settings.md
+storepack.example.ini
+troubleshooting.md

@@ -1,0 +1,7 @@
+LICENSE
+cli.md
+logs/settings.md
+overview.md
+settings.md
+wiki-format.md
+wiki2profile-csv.example.ini

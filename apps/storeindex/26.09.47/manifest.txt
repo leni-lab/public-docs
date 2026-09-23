@@ -1,0 +1,8 @@
+LICENSE
+cli.md
+overview.md
+quickstart.md
+settings.md
+storeindex.example.ini
+storeindex.sql
+troubleshooting.md

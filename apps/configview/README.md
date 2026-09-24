@@ -2,7 +2,8 @@
 
 ## versions
 
-- [26.09.50 (latest)](./26.09.50/configview/overview.md)
+- [26.09.53 (latest)](./26.09.53/configview/overview.md)
+- [26.09.50](./26.09.50/configview/overview.md)
 - [26.09.49](./26.09.49/configview/overview.md)
 - [26.09.47](./26.09.47/configview/overview.md)
 - [26.09.45](./26.09.45/configview/overview.md)

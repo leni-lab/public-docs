@@ -1,0 +1,5 @@
+LICENSE
+operation.md
+overview.md
+settings.md
+storeview.example.ini

@@ -2,7 +2,8 @@
 
 ## versions
 
-- [26.09.10 (latest)](./26.09.10/leni2store/overview.md)
+- [26.09.11 (latest)](./26.09.11/leni2store/overview.md)
+- [26.09.10](./26.09.10/leni2store/overview.md)
 - [26.09.9](./26.09.9/leni2store/overview.md)
 - [26.09.7](./26.09.7/leni2store/overview.md)
 - [26.09.4](./26.09.4/leni2store/overview.md)

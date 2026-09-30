@@ -2,7 +2,8 @@
 
 ## versions
 
-- [26.09.17 (latest)](./26.09.17/storeview/overview.md)
+- [26.09.22 (latest)](./26.09.22/storeview/overview.md)
+- [26.09.17](./26.09.17/storeview/overview.md)
 - [26.09.16](./26.09.16/storeview/overview.md)
 - [26.09.15](./26.09.15/storeview/overview.md)
 - [26.09.14](./26.09.14/storeview/overview.md)

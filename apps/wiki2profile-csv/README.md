@@ -2,7 +2,8 @@
 
 ## versions
 
-- [26.09.12 (latest)](./26.09.12/wiki2profile-csv/overview.md)
+- [26.10.1 (latest)](./26.10.1/wiki2profile-csv/overview.md)
+- [26.09.12](./26.09.12/wiki2profile-csv/overview.md)
 
 ## notes
 

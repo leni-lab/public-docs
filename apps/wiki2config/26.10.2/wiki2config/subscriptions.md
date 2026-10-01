@@ -1,17 +1,28 @@
 [back to overview](overview.md)
 ---
 
-# Newsrouter subscriptions in the Wiki
+# Subscriptions in the Wiki
 
 Use this guide to write customer subscriptions and reusable news profiles in
 the Wiki. It describes the shared Wiki syntax and the field names already
 produced by profile migration.
 
-Newsrouter delivery integration is planned. The current newsrouter application
-does not load generated subscriptions or deliver news. The examples below are
-valid Wiki configuration examples, not an activation procedure or a complete
-supported delivery interface. Filter matching, delivery scheduling, and
-transport validation still need a finalized Newsrouter contract.
+The wiki2config-subscriptions processor generates one `subscriptions.wiki.ini`
+include through a single conversion job with `output_encoding = utf-8`. See the
+[host example](https://github.com/leni-lab/wiki2config/blob/main/wiki2config.subscriptions.example.ini). Each subscription section
+contains its filters, format options, and transport options. Newsrouter and
+mailtransport include the same file and consume their respective fields.
+Application settings such as queue roots and SMTP credentials remain separate.
+
+The shared file is published as one complete revision. Applications can reload
+at different times. Their loaders must validate their own fields and ignore
+known fields owned by the other consumer. Changes to unrelated fields should
+not rebuild their active subscription state.
+
+Newsrouter loads generated subscriptions and copies matching store files into
+subscription directories. Format conversion and transport are separate steps.
+See the [router configuration](https://github.com/leni-lab/newsrouter/blob/main/docs/configuration.md) for
+current selection and output behavior.
 
 ## Start with one customer
 
@@ -143,8 +154,8 @@ The first `profiles` identifies the page filename without `.wiki`. The second
 identifies the grouping heading. Include links use Wiki brackets and the
 configured Wiki namespace. Use references have neither.
 
-Includes must appear at the very beginning, before comments, headings, prose,
-or `__NOTOC__`. Blank lines are allowed between them. `/use` does not load a
+Includes must appear before the first heading or field. Comments, prose,
+`__NOTOC__`, and blank lines may precede or separate them. `/use` does not load a
 page by itself. Defaults do not cross page boundaries unless imported. See
 [includes](includes.md) for page naming and resolution.
 
@@ -178,10 +189,10 @@ does not end a section or reset defaults.
 
 ## Field reference
 
-These are the Wiki authoring names used by profile migration. Required-field
-validation and the complete accepted field set for Newsrouter delivery are
-not finalized. A field's presence in this table does not imply that delivery
-currently consumes it.
+These are the Wiki authoring names used by profile migration and subscription
+configuration. The processor validates portable IDs, rejects duplicates across
+the complete input, and normalizes subscription dates. Format and transport
+fields are optional and passed through without domain validation.
 
 | field | use |
 | ----- | --- |
@@ -190,6 +201,7 @@ currently consumes it.
 | `kunde-title`, `abo-title` | display titles supplied by typed headings when absent |
 | `profil-id`, `profil-title` | reusable profile identity and title, imported with the profile |
 | `dienst` | service selection, for example `lwd` or `bas` |
+| `kanal` | released-channel selection, for example `bas.mecom, lwd.mecom` |
 | `schlagworte` | keyword selection, `*` is used by migration for unrestricted selection |
 | `ortsmarke` | location selection, `*` is used by migration for unrestricted selection |
 | `zeitraum` | subscription period, `D.M.YYYY - D.M.YYYY` or `D.M.YYYY -` |
@@ -202,20 +214,24 @@ currently consumes it.
 | `transport` | delivery method, `mail` for the examples |
 | `transport.recipients` | actual mail recipients |
 
-Selection values above describe the migrated configuration vocabulary.
-Newsrouter's exact matching rules, combinations of filters, handling of empty
-filters, and supported selection expressions are still open. Do not infer
-AND/OR behavior, regular expressions, or exclusion syntax from these examples.
+The configuration processor preserves filter expressions unchanged. Newsrouter
+uses commas for OR and allows `&` for AND only in keyword and location filters.
+`+` is literal. Missing, empty, or `*` filters are unrestricted. Channel matches
+any listed release independently of the originating service. Filters combine
+through AND. Values are exact and case-sensitive, without glob matching.
 
 An open period omits the end date. The existing fixed profile CSV export treats
-it as 31 December 2037 and uses inclusive dates. Newsrouter's handling of open
-periods, date boundaries, and timezones is not yet specified. A valid Wiki
-date value alone does not activate or schedule delivery.
+it as 31 December 2037 and uses inclusive dates. This processor normalizes dates
+to ISO format in `subscription_period`, preserving open bounds and retaining
+expired or future subscriptions. Newsrouter compares inclusive bounds against
+the local calendar date of the store timestamp. A valid Wiki date value alone
+does not activate or schedule delivery.
 
 The Wiki name `format.subject-prefix` differs from the current mail formatter
-parameter `subject_prefix`. Likewise, `dienst`, `schlagworte`, and `ortsmarke`
-are Wiki names, while the router draft uses `service`, `keyword`, and
-`location`. Automatic translation is not yet an available delivery feature.
+parameter `subject_prefix`. Likewise, `dienst`, `kanal`, `schlagworte`, and `ortsmarke`
+are Wiki names, while the router uses `service`, `channel`, `keyword`, and
+`location`. wiki2config-subscriptions translates these names when generating
+the shared include.
 Use the Wiki names in this guide when editing migrated pages.
 
 Each field occupies one physical line. Write separate numbered fields for

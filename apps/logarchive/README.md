@@ -2,7 +2,8 @@
 
 ## versions
 
-- [26.10.2 (latest)](./26.10.2/logarchive/overview.md)
+- [26.10.3 (latest)](./26.10.3/logarchive/overview.md)
+- [26.10.2](./26.10.2/logarchive/overview.md)
 - [26.10.1](./26.10.1/logarchive/overview.md)
 - [26.09.4](./26.09.4/logarchive/overview.md)
 - [26.09.3](./26.09.3/logarchive/overview.md)

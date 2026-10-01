@@ -2,7 +2,8 @@
 
 ## versions
 
-- [26.10.2 (latest)](./26.10.2/newspack/overview.md)
+- [26.10.3 (latest)](./26.10.3/newspack/overview.md)
+- [26.10.2](./26.10.2/newspack/overview.md)
 - [26.10.1](./26.10.1/newspack/overview.md)
 
 ## notes

@@ -2,7 +2,8 @@
 
 ## versions
 
-- [26.10.1 (latest)](./26.10.1/newsview/overview.md)
+- [26.10.2 (latest)](./26.10.2/newsview/overview.md)
+- [26.10.1](./26.10.1/newsview/overview.md)
 
 ## notes
 

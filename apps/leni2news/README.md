@@ -2,7 +2,8 @@
 
 ## versions
 
-- [26.10.1 (latest)](./26.10.1/leni2news/overview.md)
+- [26.10.2 (latest)](./26.10.2/leni2news/overview.md)
+- [26.10.1](./26.10.1/leni2news/overview.md)
 
 ## notes
 

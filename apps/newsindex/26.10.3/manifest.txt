@@ -1,0 +1,8 @@
+LICENSE
+cli.md
+newsindex.example.ini
+newsindex.sql
+overview.md
+quickstart.md
+settings.md
+troubleshooting.md

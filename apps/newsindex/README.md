@@ -2,7 +2,8 @@
 
 ## versions
 
-- [26.10.3 (latest)](./26.10.3/newsindex/overview.md)
+- [26.10.5 (latest)](./26.10.5/newsindex/overview.md)
+- [26.10.3](./26.10.3/newsindex/overview.md)
 - [26.10.2](./26.10.2/newsindex/overview.md)
 
 ## notes
